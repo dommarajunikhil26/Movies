@@ -4,9 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Carousel.css';
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Carousel({ movies }) {
+    const navigate = useNavigate();
     var settings = {
         dots: true,
         infinite: true,
@@ -29,7 +31,7 @@ export default function Carousel({ movies }) {
                             <div className="flex-1 flex flex-col justify-center items-center text-white">
                                 <h3 className="text-center text-2xl font-serif">{movie.title}</h3>
                             </div>
-                        </div >
+                        </div>
                     )
                 })}
             </Slider >
@@ -48,7 +50,7 @@ export default function Carousel({ movies }) {
                 <Button
                     variant="contained"
                     onClick={() => {
-                        alert("Button2 clicked")
+                        navigate(`/Trailer/${movies[0].trailerLink.substring(movies[0].trailerLink.length - 11)}`)
                     }}
                 >
                     Movie Trailer
