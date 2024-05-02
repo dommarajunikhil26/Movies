@@ -1,0 +1,30 @@
+/* Add to your CSS file */
+.slick-slide > div {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1 0 50%; /* Ensure each flex child takes up half of the space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slide img {
+  max-width: 50%; /* Limit image width to allow side-by-side layout */
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto !important; /* Adjust based on your specific needs */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
