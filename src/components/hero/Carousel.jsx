@@ -39,7 +39,7 @@ export default function Carousel({ movies }) {
                 <Button
                     variant="contained"
                     onClick={() => {
-                        alert("Button1 clicked")
+                        navigate(`/Reviews`)
                     }}
                     style={{
                         marginRight: "5em"
